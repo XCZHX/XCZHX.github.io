@@ -117,7 +117,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -186,7 +186,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-03-21 15:24:54 / 修改时间：15:56:47" itemprop="dateCreated datePublished" datetime="2022-03-21T15:24:54+08:00">2022-03-21</time>
+      <time title="创建时间：2022-03-21 15:24:54 / 修改时间：16:08:01" itemprop="dateCreated datePublished" datetime="2022-03-21T15:24:54+08:00">2022-03-21</time>
     </span>
 
   
@@ -200,80 +200,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="V2ray反向代理的工作原理："><a href="#V2ray反向代理的工作原理：" class="headerlink" title="V2ray反向代理的工作原理："></a>V2ray反向代理的工作原理：</h2><p>反向代理可以把服务器端的流量向客户端转发，即逆向流量转发。<br>1、反向代理的使用场景为：假设在主机A中有一个网页服务器，但其没有公网IP，无法直接通过公网访问。而另一台主机B则拥有公网IP。而这时，我们便需要将B作为入口，将流量从B转发到A。<br>2、主机A中的V2ray称为bridge，主机B中的V2ray称为portal。<br>3、bridge会向portal主动建立连接，此连接的目标地址可以自行设定。portal会收到两种连接，一是由bridge发来的连接，二是主机B发来的连接。portal会自动将两类连接合并。于是bridge就可以收到了主机B的公网流量了。<br>4、bridge在收到主机B的公网流量之后，会将其原封不动地发给主机 A 中的网页服务器。当然，这一步需要路由的协作。  </p>
-<h2 id="配置文件中的reverse项"><a href="#配置文件中的reverse项" class="headerlink" title="配置文件中的reverse项"></a>配置文件中的reverse项</h2><p>其中bridges代表bridge数组，portals代表portal数组。<br>tag：一个标识，所有由 bridge 发出的连接，都会带有这个标识。可以在路由中使用inboundTag进行识别。<br>domain：一个域名。bridge 向 portal 建立的连接，都会使用这个域名进行发送。这个域名只作为 bridge 和 portal 的通信用途，不必真实存在。  </p>
-<p>具体配置可参考配置文件</p>
-<p>bridge通常需要两个出站代理（outbounds），一个用于连接portal，另一个用于发送实际的流量。也就是说，需要用路由（routing）区分两种流量。<br>portal通常需要两个入站代理（inbounds），一个用于接收bridge的连接，另一个用于接收实际的流量。同时也需要用路由（routing）区分两种流量。  </p>
-<h2 id="V2ray内网穿透的工作原理："><a href="#V2ray内网穿透的工作原理：" class="headerlink" title="V2ray内网穿透的工作原理："></a>V2ray内网穿透的工作原理：</h2><p>V2ray内网穿透具有三个对象，分别为：待访问的内网服务器bridge，具有公网IP外部用户可访问的中间服务器portal，需要访问内网的外部用户client。<br>基础内网穿透：只访问一个指定端口。Client不需要配置v2ray，直接通过浏览器访问公网IP+端口号即可。场景举例：在外面访问家中的NAS。在本场景中，portal成为一个“端口转发机”。<br>1、    在bridge和portal中各配置v2ray<br>2、    Portal中的接收真实流量的协议应设置为任意门  （dokodemo-door），即原封不动转发至指定端口。  </p>
-<p>全局内网穿透：可全局访问内网服务器。Client需要配置v2ray并设置代理。场景举例：在国外访问国内网络，在校外访问校内网络。在本场景中，client等效于在bridge网络中，即portal成为一个从外部通向内网的“梯子”。<br>1、    在bridge，portal和client中各配置v2ray<br>2、    Portal中的接收真实流量的协议应设为vmess，即接收client的vmess协议连接。<br>3、    Client中需要设置入站代理。具体情况可见《内网穿透使用手册》。  </p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/test-my-site/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Zhenghan Chen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/21/test-my-site/" class="post-title-link" itemprop="url">test_my_site</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-21 12:28:48" itemprop="dateCreated datePublished" datetime="2022-03-21T12:28:48+08:00">2022-03-21</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/21/Test/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
