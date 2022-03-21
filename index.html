@@ -196,7 +196,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-03-21 20:47:15 / 修改时间：21:14:39" itemprop="dateCreated datePublished" datetime="2022-03-21T20:47:15+08:00">2022-03-21</time>
+      <time title="创建时间：2022-03-21 20:47:15 / 修改时间：21:24:55" itemprop="dateCreated datePublished" datetime="2022-03-21T20:47:15+08:00">2022-03-21</time>
     </span>
 
   
@@ -215,28 +215,15 @@
 <ol>
 <li><code>bridge</code>（待访问的内网服务器）</li>
 <li><code>portal</code>（具有公网IP的主机）</li>
-<li><code>client</code>（需要访问内网的外部用户）</li>
-</ol>
-<h2 id="v2ray配置方法："><a href="#v2ray配置方法：" class="headerlink" title="v2ray配置方法："></a>v2ray配置方法：</h2><h3 id="Windows下配置："><a href="#Windows下配置：" class="headerlink" title="Windows下配置："></a>Windows下配置：</h3><ol>
-<li>从 <a target="_blank" rel="noopener" href="https://github.com/v2fly/v2ray-core/releases">https://github.com/v2fly/v2ray-core/releases</a> 下载Windows版压缩包并解压。</li>
-<li>修改<code>config.json</code>文件。</li>
-<li>双击<code>v2ray.exe</code>运行即可。</li>
-</ol>
-<h3 id="Linux下配置："><a href="#Linux下配置：" class="headerlink" title="Linux下配置："></a>Linux下配置：</h3><ol>
-<li>从 <a target="_blank" rel="noopener" href="https://github.com/v2fly/v2ray-core/releases">https://github.com/v2fly/v2ray-core/releases</a> 下载Linux版压缩包并解压。</li>
-<li>进入v2ray文件夹并授予权限：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x v2ray v2ctl</span><br></pre></td></tr></table></figure></li>
-<li>修改config.json文件</li>
-<li>添加启动服务：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/lib/systemd/system/v2ray.service</span><br></pre></td></tr></table></figure></li>
-<li>创建软连接：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s 文件夹路径/v2ray /bin/v2ray</span><br><span class="line">ln -s 文件夹路径/v2ctl /bin/v2ctl</span><br></pre></td></tr></table></figure></li>
-<li>启动服务：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl start v2ray</span><br></pre></td></tr></table></figure>
-<h2 id="启动服务："><a href="#启动服务：" class="headerlink" title="启动服务："></a>启动服务：</h2><code>bridge</code>和<code>portal</code>直接启动服务即可。<br><code>client</code>启动服务后，需设置代理：  <h3 id="Windows10-11："><a href="#Windows10-11：" class="headerlink" title="Windows10/11："></a>Windows10/11：</h3>设置 $\Rightarrow$ 网络和Internet $\Rightarrow$ 代理 $\Rightarrow$ 手动设置代理<br><font color=red size=3>注意！！！在下列条目中删除自己需要访问的内网服务器IP段！</font><div align=center>
-<img src="http://r93effwkn.bkt.clouddn.com/blog_pic/2.png"/>
-<font color=gray size=2>v2ray内网穿透网络拓扑图</font>
-</div></li>
-</ol>
-<h3 id="Linux："><a href="#Linux：" class="headerlink" title="Linux："></a>Linux：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export http_proxy=http://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-<p><font color=red size=5><strong>注意：portal需开放config.json中inbounds设置的两个端口！</strong></font></p>
-
+<li><code>client</code>（需要访问内网的外部用户）
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/21/2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -292,7 +279,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-03-21 15:24:54 / 修改时间：20:50:01" itemprop="dateCreated datePublished" datetime="2022-03-21T15:24:54+08:00">2022-03-21</time>
+      <time title="创建时间：2022-03-21 15:24:54 / 修改时间：21:23:59" itemprop="dateCreated datePublished" datetime="2022-03-21T15:24:54+08:00">2022-03-21</time>
     </span>
 
   
