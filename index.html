@@ -196,7 +196,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-03-21 15:24:54 / 修改时间：16:20:15" itemprop="dateCreated datePublished" datetime="2022-03-21T15:24:54+08:00">2022-03-21</time>
+      <time title="创建时间：2022-03-21 15:24:54 / 修改时间：17:38:36" itemprop="dateCreated datePublished" datetime="2022-03-21T15:24:54+08:00">2022-03-21</time>
     </span>
 
   
@@ -209,7 +209,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="V2ray反向代理的工作原理："><a href="#V2ray反向代理的工作原理：" class="headerlink" title="V2ray反向代理的工作原理："></a>V2ray反向代理的工作原理：</h2><p>反向代理可以把服务器端的流量向客户端转发，即逆向流量转发。<br>1、反向代理的使用场景为：假设在主机A中有一个网页服务器，但其没有公网IP，无法直接通过公网访问。而另一台主机B则拥有公网IP。而这时，我们便需要将B作为入口，将流量从B转发到A。<br>2、主机A中的V2ray称为bridge，主机B中的V2ray称为portal。<br>3、bridge会向portal主动建立连接，此连接的目标地址可以自行设定。portal会收到两种连接，一是由bridge发来的连接，二是主机B发来的连接。portal会自动将两类连接合并。于是bridge就可以收到了主机B的公网流量了。<br>4、bridge在收到主机B的公网流量之后，会将其原封不动地发给主机 A 中的网页服务器。当然，这一步需要路由的协作。  </p>
+          <h1 id="v2ray反向代理的工作原理："><a href="#v2ray反向代理的工作原理：" class="headerlink" title="v2ray反向代理的工作原理："></a>v2ray反向代理的工作原理：</h1><p>反向代理可以把服务器端的流量向客户端转发，即逆向流量转发。  </p>
+<ul>
+<li>反向代理的使用场景为：假设在主机A中有一个网页服务器，但其没有公网IP，无法直接通过公网访问。而另一台主机B则拥有公网IP。而这时，我们便需要将B作为入口，将流量从B转发到A。  </li>
+<li>主机A中的v2ray称为<code>bridge</code>，主机B中的v2ray称为<code>portal</code>。  </li>
+<li><code>bridge</code>会向<code>portal</code>主动建立连接，此连接的目标地址可以自行设定。<code>portal</code>会收到两种连接，一是由<code>bridge</code>发来的连接，二是主机B发来的连接。<code>portal</code>会自动将两类连接合并。于是<code>bridge</code>就可以收到了主机B的公网流量了。  </li>
+<li><code>bridge</code>在收到主机B的公网流量之后，会将其原封不动地发给主机 A 中的网页服务器。当然，这一步需要路由的协作。
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/03/21/Test/#more" rel="contents">
