@@ -1,10 +1,10 @@
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
-    autoplay: false,
+    autoplay: true,
     listFolded: true,
     listMaxHeight: 10,
     audio: [
-        {
+        /*{
             name: '飞鸟和蝉',
             artist: '阿梓',
             url: '/uploads/飞鸟和蝉.mp3'
@@ -28,6 +28,11 @@ const ap = new APlayer({
             name: '化身孤岛的鲸',
             artist: '阿梓',
             url: '/uploads/化身孤岛的鲸.mp3',
+        }*/
+        {
+            name: '生日祝福歌',
+            artist: '格格',
+            url: '/uploads/生日祝福歌.mp3',
         }
     ]
 })
